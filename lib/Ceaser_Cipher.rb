@@ -1,6 +1,3 @@
-require 'pry-byebug'
-# binding.pry
-# HAVE TO SUBMIT AT ODIN !!!
 
 def custom_ord(char, skip) # converts a letter
   if char.match?(/\A[a-zA-Z'-]*\z/) # only alphabets need shifting
