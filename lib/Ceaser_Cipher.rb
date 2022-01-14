@@ -16,15 +16,24 @@ def ord_on_word(word, skip) # converts a word
 end
 
 def encode_sentence(sentence, skip) # converts a sentence
+  return nil if skip<0
   sentence.split(' ').map { |word| ord_on_word(word, skip) }.join(' ')
 end
 
-puts 'enter string'
-sentence = gets
-puts 'enter +ve KEY'
-key = -1
-while key < 0
-  key = gets.chomp.to_i
-  p 'entr +ve bruh' if key < 0
+# un comment commented code to run normally 
+=begin
+def get_input
+  puts 'enter string'
+  sentence = gets
+  puts 'enter +ve KEY'
+  key = -1
+  while key < 0
+    key = gets.chomp.to_i
+    p 'entr +ve bruh' if key < 0
+  end
+  encode_sentence(sentence, key)
 end
-p encode_sentence(sentence, key)
+
+p get_input
+=end
+p encode_sentence('My name is what?, my name is who? , 78& is ',7)
